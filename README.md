@@ -1,6 +1,6 @@
 # Fighting-for-interview
 
-> 知识点汇集
+> 知识点汇集
 
 ## Contents
 
