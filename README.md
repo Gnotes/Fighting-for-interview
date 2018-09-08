@@ -9,6 +9,8 @@
 - [HTML](./html.md)
 - [CSS](./css.md)
 - [JavaScript](./javascript.md)
+- [Web](./web.md)
+- [Http](./http.md)
 
 #### Back-End
 
