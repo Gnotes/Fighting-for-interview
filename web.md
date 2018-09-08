@@ -32,7 +32,7 @@ localstorage是浏览器多个标签共用的存储空间，所以可以用来�
 </details>
 
 <details>
-<summary>WebSocket通讯</summary>
+<summary>WebSocket通讯</summary>
 
 ```
 WebSocket是HTML5新增的协议，它的目的是在服务器和浏览器之间建立一个不受限的双向通信的通道，如: 服务器可以在任意时刻发送消息给浏览器  
