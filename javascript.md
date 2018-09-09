@@ -507,3 +507,60 @@ ajax("get", "/api/fetch", function (result) {
 - [javascript等号判断相等流程](https://segmentfault.com/a/1190000006813184)
 
 </details>
+
+<details>
+<summary> undefined,null,NaN的区别 </summary>
+
+#### 类型分析
+
+> JavaScript中的数据类型有 undefined,boolean,number,string,object等5种，前4种为原始类型，第5种为引用类型
+
+```js
+var a1;
+var a2 = true;
+var a3 = 1;
+var a4 = "Hello";
+var a5 = new Object();
+var a6 = null;
+var a7 = NaN;
+var a8 = undefined;
+
+typeof a  // undefined
+typeof a1 // undefined
+typeof a2 // boolean
+typeof a3 // number
+typeof a4 // string
+typeof a5 // object
+typeof a6 // object
+typeof a7 // number
+```
+
+可以看出 `未定义的值` 和定义未赋值的为 `undefined`，`null` 是一种特殊的 `object` ,`NaN` 是一种特殊的 `number`
+
+#### 比较运算
+
+```js
+var a1;  // undefined
+var a2 = null;
+var a3 = NaN;
+
+a1 == a2 // true
+a1 != a2 // false
+a1 == a3 // false
+a1 != a3 // true
+a2 == a3 // false
+a2 != a3 // true
+a3 == a3 // false
+a3 != a3 // true
+```
+
+1）`undefined` 与 `null` 是相等  
+2）`NaN` 与任何值都不相等，与自己也不相等  
+
+> null 表示无值，而 undefined 表示一个未声明的变量，或已声明但没有赋值的变量，或一个并不存在的对象属性
+
+#### 参考
+
+- [undefined,null,NaN的区别](https://www.jb51.net/article/44472.htm)
+
+</details>
