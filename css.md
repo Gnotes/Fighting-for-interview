@@ -94,3 +94,163 @@ p {color:red;}
 
 </details>
 
+<details>
+<summary>CSS 水平垂直居中</summary>
+
+#### 仅居中元素宽高确定时适用
+
+```html
+<div class="outter">
+  <div class="inner"></div>
+</div>
+```
+
+- absolute + 负margin
+
+```css
+.outter {
+  width: 300px;
+  height: 300px;
+}
+
+.innner {
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+```
+
+- absolute + margin auto
+
+```css
+.outter {
+  width: 300px;
+  height: 300px;
+
+  position: relative;
+}
+
+.innner {
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+```
+
+- absolute + calc
+
+```css
+.outter {
+  width: 300px;
+  height: 300px;
+
+  position: relative;
+}
+
+.innner {
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+```
+
+#### 居中元素不定宽高适用
+
+- absolute + transform
+
+```css
+.outter {
+  width: 300px;
+  height: 300px;
+
+  position: relative;
+}
+
+.innner {
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+```
+
+- [writing-mode](https://www.cnblogs.com/xiaofenguo/p/6168865.html)
+
+- lineheight
+
+```css
+.outter {
+  line-height: 300px;
+  text-align: center;
+  font-size: 0px;
+}
+
+.innner {
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: initial;
+```
+
+- table-cell
+
+```css
+.outter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.innner {
+  display: inline-block;
+}
+```
+
+- flex
+
+```css
+.outter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innner {
+  display: inline-block;
+}
+```
+
+- grid
+
+```css
+.outter {
+  display: grid;
+}
+
+.innner {
+  align-self: center;
+  justify-self: center;
+}
+```
+
+
+#### 参考
+
+- [水平垂直居中](https://github.com/yanhaijing/vertical-center)
+
+</details>

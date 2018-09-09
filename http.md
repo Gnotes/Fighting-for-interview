@@ -1,6 +1,5 @@
 # Http
 
-
 <details>
 <summary>XMLHttpRequest</summary>
 
