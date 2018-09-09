@@ -11,6 +11,7 @@
 - [JavaScript](./javascript.md)
 - [Web](./web.md)
 - [Http](./http.md)
+- [Others](./others.md)
 
 #### Back-End
 
