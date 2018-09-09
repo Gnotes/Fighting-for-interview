@@ -564,3 +564,21 @@ a3 != a3 // true
 - [undefined,null,NaN的区别](https://www.jb51.net/article/44472.htm)
 
 </details>
+
+<details>
+<summary>立即执行函数表达式（IIFE）</summary>
+
+#### 参考
+
+- [立即执行函数表达式（IIFE）](https://segmentfault.com/a/1190000003985390)
+
+</details>
+
+<details>
+<summary>事件委托</summary>
+
+#### 参考
+
+- [事件委托](https://www.cnblogs.com/liugang-vip/p/5616484.html)
+
+</details>
