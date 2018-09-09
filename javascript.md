@@ -597,3 +597,18 @@ a3 != a3 // true
 - [script标签中defer和async属性的区别](https://www.cnblogs.com/neusc/archive/2016/08/12/5764162.html)
 
 </details>
+
+<details>
+<summary>js创建对象的多种方式</summary>
+
+- 对象字面量
+- 内置构造函数
+- 构造函数模式
+- 原型
+- class
+
+#### 参考
+
+- [js创建对象的多种方式及优缺点](https://www.cnblogs.com/cythia/p/6958021.html)
+
+</details>
