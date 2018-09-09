@@ -584,18 +584,6 @@ a3 != a3 // true
 </details>
 
 <details>
-<summary>移动端 1px 被 渲染成 2px 问题</summary>
-
-> 开发移动端web项目时经常遇到设置border:1px，但是显示的边框却为2px或是3px粗细，这是因为设备像素比devicePixelRatio为2或3引起的
-
-#### 参考
-
-- [设备像素比devicePixelRatio简单介绍](https://www.zhangxinxu.com/wordpress/2012/08/window-devicepixelratio/)
-- [7种方法解决移动端Retina屏幕1px边框问题](https://www.jianshu.com/p/7e63f5a32636)
-
-</details>
-
-<details>
 <summary>script 标签的defer、async的区别</summary>
 
 > 由于解释器在解析执行js代码期间会阻塞页面其余部分的渲染，对于存在大量js代码的页面来说会导致浏览器出现长时间的空白和延迟

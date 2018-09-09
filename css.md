@@ -254,3 +254,15 @@ p {color:red;}
 - [水平垂直居中](https://github.com/yanhaijing/vertical-center)
 
 </details>
+
+<details>
+<summary>移动端 1px 被 渲染成 2px 问题</summary>
+
+> 开发移动端web项目时经常遇到设置border:1px，但是显示的边框却为2px或是3px粗细，这是因为设备像素比devicePixelRatio为2或3引起的
+
+#### 参考
+
+- [设备像素比devicePixelRatio简单介绍](https://www.zhangxinxu.com/wordpress/2012/08/window-devicepixelratio/)
+- [7种方法解决移动端Retina屏幕1px边框问题](https://www.jianshu.com/p/7e63f5a32636)
+
+</details>
