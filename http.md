@@ -84,3 +84,21 @@
 - [浏览器输入URL到展示页面过程](https://www.jianshu.com/p/0a2c35e8e2b7)
 
 </details>
+
+<details>
+<summary>JS跨域问题</summary>
+
+> 跨域问题是由于javascript语言安全限制中的同源策略造成的.同源策略是指一段脚本只能读取来自同一来源的窗口和文档的属性,这里的同一来源指的是主机名、协议和端口号的组合.
+
+#### 解决方式
+
+- 跨域资源共享（CORS）
+- jsonp
+- iframe
+- postMessage
+
+#### 参考
+
+- [JS 跨域问题常见的五种解决方式](https://www.cnblogs.com/imwtr/p/4764123.html)
+
+</details>

@@ -612,3 +612,151 @@ a3 != a3 // true
 - [js创建对象的多种方式及优缺点](https://www.cnblogs.com/cythia/p/6958021.html)
 
 </details>
+
+<details>
+<summary>js常用继承方式</summary>
+
+- 原型
+
+```js
+function Parent() { }
+function Child() {}
+
+Child.prototype = new Parent();
+```
+
+- 构造函数
+
+```js
+function Parent(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+function Child(name, age) {
+  Parent.call(this, name, age); // 或者apply
+}
+```
+
+- extends
+
+```js
+class Parent (){ }
+class Child extends Parent { }
+```
+
+#### 参考
+
+- [js中实现继承的几种方式](https://www.cnblogs.com/diligentYe/p/6413450.html)
+
+</details>
+
+<details>
+<summary>不规则图形事件处理</summary>
+
+**热区处理**
+
+</details>
+
+<details>
+<summary>闭包</summary>
+
+> 一个拥有许多变量和绑定了这些变量的环境的表达式（通常是一个函数），因而这些变量也是该表达式的一部分
+
+#### 参考
+
+- [全面理解Javascript闭包和闭包的几种写法及用途](https://www.cnblogs.com/yunfeifei/p/4019504.html)
+- [学习Javascript闭包（Closure）](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
+
+</details>
+
+<details>
+<summary>Object 常用方法</summary>
+
+#### 参考
+
+- [Object | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)
+
+</details>
+
+<details>
+<summary>String 常用方法</summary>
+
+#### 参考
+
+- [String | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+
+</details>
+
+<details>
+<summary>Array 常用方法</summary>
+
+#### 参考
+
+- [Array | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+</details>
+
+<details>
+<summary>JS 实现千分位</summary>
+
+- 正则
+
+```js
+function format (num) {  
+  var reg=/\d{1,3}(?=(\d{3})+$)/g;   
+  return (num + '').replace(reg, '$&,');  
+}
+```
+
+- for循环
+
+```js
+function format(num){  
+  num=num+'';//数字转字符串  
+  var str="";//字符串累加  
+  for(var i=num.length- 1,j=1;i>=0;i--,j++){  
+      if(j%3==0 && i!=0){//每隔三位加逗号，过滤正好在第一个数字的情况  
+          str+=num[i]+",";//加千分位逗号  
+          continue;  
+      }  
+      str+=num[i];//倒着累加数字
+  }  
+  return str.split('').reverse().join("");//字符串=>数组=>反转=>字符串  
+} 
+```
+
+#### 参考
+
+- [JS 实现千分位](https://www.cnblogs.com/lvmylife/p/8287247.html)
+
+</details>
+
+<details>
+<summary>深拷贝</summary>
+
+```js
+function deepClone(obj){
+    let objClone = Array.isArray(obj)?[]:{};
+    if(obj && typeof obj==="object"){
+        for(key in obj){
+            if(obj.hasOwnProperty(key)){
+                //判断ojb子元素是否为对象，如果是，递归复制
+                if(obj[key]&&typeof obj[key] ==="object"){
+                    objClone[key] = deepClone(obj[key]);
+                }else{
+                    //如果不是，简单复制
+                    objClone[key] = obj[key];
+                }
+            }
+        }
+    }
+    return objClone;
+}
+```
+
+#### 参考
+
+- [JS 深拷贝](https://www.cnblogs.com/echolun/p/7889848.html)
+
+</details>

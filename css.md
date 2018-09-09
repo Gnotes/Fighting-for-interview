@@ -285,3 +285,93 @@ p {color:red;}
 - [前端：『REM』手机屏幕高清适配方案](https://github.com/hbxeagle/rem/blob/master/HD_ADAPTER.md)
 
 </details>
+
+<details>
+<summary>css reset</summary>
+
+> HTML标签在浏览器中都有默认的样式，不同的浏览器的默认样式之间存在差别,默认样式可能会给我们带来多浏览器兼容性问题，影响开发效率
+
+#### 参考
+
+- [css-reset 代码](https://segmentfault.com/a/1190000009369872)
+
+</details>
+
+<details>
+<summary>css选择器</summary>
+
+- 标签选择
+- 类选择器
+- ID选择器
+- 全局选择器
+- 组合选择器
+- 继承选择器
+- 伪类选择器
+- 字符串匹配的属性选择符
+
+#### 参考
+
+- [CSS 选择器参考手册](http://www.w3school.com.cn/cssref/css_selectors.asp)
+
+</details>
+
+<details>
+<summary>css 优先级（权重）</summary>
+
+`!important(不可更改)` > `内联样式(1000)` > `ID选择器(100)` > `类选择器(10)` > `标签选择器(1)`
+
+#### 参考
+
+- [css 样式重写无效， 如何生效 !important](https://github.com/zanjs/awesome-frontend-interview/issues/38)
+
+</details>
+
+<details>
+<summary>CSS Hack</summary>
+
+> 不同的浏览器对CSS的解析结果是不同的，因此会导致相同的CSS输出的页面效果不同，这就需要CSS Hack来解决浏览器局部的兼容性问题。而这个针对不同的浏览器写不同的CSS 代码的过程，就叫CSS Hack
+
+#### 常用的 CSS Hack
+
+```css
+/* CSS属性级Hack */
+color:red; /* 所有浏览器可识别*/
+_color:red; /* 仅IE6 识别 */
+*color:red; /* IE6、IE7 识别 */
++color:red; /* IE6、IE7 识别 */
+*+color:red; /* IE6、IE7 识别 */
+[color:red; /* IE6、IE7 识别 */
+color:red9; /* IE6、IE7、IE8、IE9 识别 */
+color:red; /* IE8、IE9 识别*/
+color:red9; /* 仅IE9识别 */
+color:red ; /* 仅IE9识别 */
+color:red!important; /* IE6 不识别!important*/
+```
+
+```css
+/* CSS选择符级Hack */
+*html #demo { color:red;} /* 仅IE6 识别 */
+*+html #demo { color:red;} /* 仅IE7 识别 */
+body:nth-of-type(1) #demo { color:red;} /* IE9+、FF3.5+、Chrome、Safari、Opera 可以识别 */
+head:first-child+body #demo { color:red; } /* IE7+、FF、Chrome、Safari、Opera 可以识别 */
+:root #demo { color:red9; } : /* 仅IE9识别 */
+```
+
+```css
+/* IE条件注释Hack */
+<!--[if IE]>此处内容只有IE可见<![endif]--> 
+<!--[if IE 6]>此处内容只有IE6.0可见<![endif]--> 
+<!--[if IE 7]>此处内容只有IE7.0可见<![endif]--> 
+<!--[if !IE 7]>此处内容只有IE7不能识别，其他版本都能识别，当然要在IE5以上。<![endif]-->
+<!--[if gt IE 6]> IE6以上版本可识别,IE6无法识别 <![endif]-->
+<!--[if gte IE 7]> IE7以及IE7以上版本可识别 <![endif]-->
+<!--[if lt IE 7]> 低于IE7的版本才能识别，IE7无法识别。 <![endif]-->
+<!--[if lte IE 7]> IE7以及IE7以下版本可识别<![endif]-->
+<!--[if !IE]>此处内容只有非IE可见<![endif]-->
+```
+
+#### 参考
+
+- [CSS Hack](https://github.com/zanjs/awesome-frontend-interview/issues/26)
+
+</details>
