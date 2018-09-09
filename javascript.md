@@ -594,3 +594,18 @@ a3 != a3 // true
 - [7种方法解决移动端Retina屏幕1px边框问题](https://www.jianshu.com/p/7e63f5a32636)
 
 </details>
+
+<details>
+<summary>script 标签的defer、async的区别</summary>
+
+> 由于解释器在解析执行js代码期间会阻塞页面其余部分的渲染，对于存在大量js代码的页面来说会导致浏览器出现长时间的空白和延迟
+
+- `defer` 和 `async` 在网络加载过程是一致的，都是异步加载并执行的
+- 两者的区别在于脚本加载完成之后何时执行，`defer` 执行需要等到文档所有元素解析完成之后，DOMContentLoaded事件触发执行之前，而 `async` 是加载完成后立即执行
+- 如果存在多个有 `defer` 属性的脚本，那么它们是按照 `加载顺序` 执行脚本的；而对于 `async`，它的加载和执行是紧紧挨着的，无论声明顺序如何，只要加载完成就立刻执行，它对于应用脚本用处不大，因为它完全不考虑依赖
+
+#### 参考
+
+- [script标签中defer和async属性的区别](https://www.cnblogs.com/neusc/archive/2016/08/12/5764162.html)
+
+</details>
