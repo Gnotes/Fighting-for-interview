@@ -266,3 +266,22 @@ p {color:red;}
 - [7种方法解决移动端Retina屏幕1px边框问题](https://www.jianshu.com/p/7e63f5a32636)
 
 </details>
+
+<details>
+<summary>css 清除浮动</summary>
+
+#### 参考
+
+- [css 清除浮动](https://www.cnblogs.com/Gabriel-Wei/p/6184392.html)
+
+</details>
+
+<details>
+<summary>手机布局适配</summary>
+
+#### 参考
+
+- [了解真实的『REM』手机屏幕适配](https://github.com/hbxeagle/rem/blob/master/README.md)
+- [前端：『REM』手机屏幕高清适配方案](https://github.com/hbxeagle/rem/blob/master/HD_ADAPTER.md)
+
+</details>
