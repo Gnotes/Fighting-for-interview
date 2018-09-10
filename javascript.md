@@ -760,3 +760,28 @@ function deepClone(obj){
 - [JS 深拷贝](https://www.cnblogs.com/echolun/p/7889848.html)
 
 </details>
+
+<details>
+<summary>函数式编程</summary>
+
+> 将复杂过程抽象成单一处理逻辑的纯函数编码思想，即一个函数只干一件事件，相同输入对应相同输出，不受外部环境影响，执行过程也不影响外部环境
+
+#### 参考
+
+- [漫谈 JS 函数式编程](http://web.jobbole.com/91602/)
+
+</details>
+
+<details>
+<summary>import 和 require</summary>
+
+- `require` 是 `AMD|CommonJS` 规范的实现，动态加载模块，在运行时确定模块的依赖关系及输入/输出的变量
+- `import` 静态加载，在编译时期就确定输入/输出的变量
+
+#### 参考
+
+- [JS 中的require 和 import 区别](https://www.cnblogs.com/ariel-zhang/p/7127714.html)
+- [Javascript(es2016) import和require用法和区别](https://blog.csdn.net/chinaycheng/article/details/52559439)
+- [前端模块化（CommonJs,AMD和CMD）](https://www.jianshu.com/p/d67bc79976e6)
+
+</details>
