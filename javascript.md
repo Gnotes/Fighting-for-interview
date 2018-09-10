@@ -799,3 +799,80 @@ function deepClone(obj){
 - [JavaScript中避免回调地狱方法](https://blog.csdn.net/m0_37263637/article/details/80742239)
 
 </details>
+
+<details>
+<summary>JS实现sleep</summary>
+
+```js
+function sleep(numberMillis) {
+  var now = new Date();
+  var exitTime = now.getTime() + numberMillis;
+  while (true) {
+    now = new Date();
+    if (now.getTime() > exitTime)
+      return;
+  }
+} 
+```
+
+#### 参考
+
+- [javascript里模拟sleep(两种实现方式)](https://www.jb51.net/article/33581.htm)
+
+</details>
+
+<details>
+<summary>值类型和引用类型</summary>
+
+- 基本数据类型：`undefined`、`null`、`boolean`、`number`、`string`、`symbol`
+- 引用数据类型：`object`、`array`、`function`
+
+值类型直接指向值，引用类型指向内存地址
+
+#### 参考
+
+- [JS 的基本数据类型和引用数据类型](https://github.com/zanjs/awesome-frontend-interview/issues/6)
+
+</details>
+
+<details>
+<summary>mul函数</summary>
+
+- 递归 和 valueOf
+
+```js
+function mul(x) {
+  const res = (y) => mul(x * y);
+  res.valueOf = () => x;
+  return res;
+}
+```
+
+#### 参考
+
+- [mul函数](https://www.cnblogs.com/newh5/p/6337038.html)
+
+</details>
+
+<details>
+<summary>简单的模板引擎</summary>
+
+主要思想通过 `new Function` 构造可执行的方法
+
+```js
+var fn = new Function("arg", "console.log(arg + 1);");
+```
+
+等同于
+
+```js
+var fn = function(arg) {
+  console.log(arg + 1);
+}
+```
+
+#### 参考
+
+- [教你使用javascript简单写一个页面模板引擎](https://www.jb51.net/article/65480.htm)
+
+</details>
