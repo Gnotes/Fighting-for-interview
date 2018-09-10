@@ -876,3 +876,59 @@ var fn = function(arg) {
 - [教你使用javascript简单写一个页面模板引擎](https://www.jb51.net/article/65480.htm)
 
 </details>
+
+<details>
+<summary>JS 切割等长度的小数组</summary>
+
+```js
+const chunk = (arr, size) =>
+Array.from({length: Math.ceil(arr.length / size)}, (v, i) => arr.slice(i * size, i * size + size));
+// chunk([1,2,3,4,5], 2) -> [[1,2],[3,4],[5]]
+```
+
+#### 参考
+
+- [30-seconds-of-code](https://github.com/kujian/30-seconds-of-code#chunk)
+
+</details>
+
+<details>
+<summary>计算数组中值的出现次数</summary>
+
+```js
+const counts = (arr, value) => arr.reduce((a, v) => v === value ? a + 1 : a + 0, 0);
+```
+
+#### 参考
+
+- [30-seconds-of-code](https://github.com/kujian/30-seconds-of-code#countoccurrences)
+
+</details>
+
+<details>
+<summary>多层嵌套数组合并为一层</summary>
+
+```js
+const deepFlatten = arr => [].concat(...arr.map(v => Array.isArray(v) ? deepFlatten(v) : v));
+```
+
+#### 参考
+
+- [30-seconds-of-code](https://github.com/kujian/30-seconds-of-code#deepFlatten)
+
+</details>
+
+<details>
+<summary>数组去重</summary>
+
+这种方式有意思哈
+
+```js
+const unique = arr => arr.filter(i => arr.indexOf(i) === arr.lastIndexOf(i));
+```
+
+#### 参考
+
+- [30-seconds-of-code](https://github.com/kujian/30-seconds-of-code#filternonunique)
+
+</details>
