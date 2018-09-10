@@ -785,3 +785,17 @@ function deepClone(obj){
 - [前端模块化（CommonJs,AMD和CMD）](https://www.jianshu.com/p/d67bc79976e6)
 
 </details>
+
+<details>
+<summary>回调狱</summary>
+
+- Promise
+- async / await
+- Generator
+- * / yeild
+
+#### 参考
+
+- [JavaScript中避免回调地狱方法](https://blog.csdn.net/m0_37263637/article/details/80742239)
+
+</details>
