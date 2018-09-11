@@ -443,3 +443,44 @@ head:first-child+body #demo { color:red; } /* IE7+、FF、Chrome、Safari、Oper
 - [html5 div布局与table布局](https://blog.csdn.net/csdn9_14/article/details/53177614)
 
 </details>
+
+<details>
+<summary>css3新特性</summary>
+
+#### 参考
+
+- [css3新特性](https://juejin.im/post/5a0c184c51882531926e4294)
+
+</details>
+
+<details>
+<summary>box-sizing</summary>
+
+> 设置CSS盒模型为标准模型或IE模型。标准模型的宽度只包括content，二IE模型包括border和padding
+box-sizing属性可以为三个值之一：
+
+- `content-box`，默认值，只计算内容的宽度，border和padding不计算入width之内
+- `padding-box`，padding计算入宽度内
+- `border-box`，border和padding计算入宽度之内
+
+#### 参考
+
+- [box-sizing是什么](https://juejin.im/post/5a954add6fb9a06348538c0d)
+
+</details>
+
+<details>
+<summary>CSS隐藏元素的几种方式</summary>
+
+- display:none
+- visibility:hidden
+- opacity:0
+- height=width=0
+- position
+- z-index
+
+#### 参考
+
+- [CSS知识总结](https://juejin.im/post/5a954add6fb9a06348538c0d)
+
+</details>
