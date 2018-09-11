@@ -375,3 +375,71 @@ head:first-child+body #demo { color:red; } /* IE7+、FF、Chrome、Safari、Oper
 - [CSS Hack](https://github.com/zanjs/awesome-frontend-interview/issues/26)
 
 </details>
+
+<details>
+<summary>CSS 常见布局实现</summary>
+
+#### 参考
+
+- [干货!各种常见布局实现](https://juejin.im/post/5aa252ac518825558001d5de)
+
+</details>
+
+<details>
+<summary>CSS 双飞翼布局 & 圣杯布局</summary>
+
+- 双飞翼布局
+
+```html
+<body>
+<div id="hd">header</div> 
+  <div id="middle">
+    <div id="inside">middle</div>
+  </div>
+  <div id="left">left</div>
+  <div id="right">right</div>
+  <div id="footer">footer</div>
+</body>
+```
+- 圣杯布局
+
+```html
+<body>
+<div id="hd">header</div>
+<div id="bd">
+  <div id="middle">middle</div>
+  <div id="left">left</div>
+  <div id="right">right</div>
+</div>
+<div id="footer">footer</div>
+</body>
+```
+
+> 双飞翼布局是在middle的div里又插入一个div，通过调整内部div的margin值，实现中间栏自适应，内容写到内部div中
+
+> 思路：通过 `float` 浮动，脱离文档流，中间 `100%`, 左边 `-100%`, 右边 `-width` 实现在同一行，然后通过 `position` 左右修正距离，并清除浮动
+
+#### 参考
+
+- [CSS 圣杯布局](https://www.jianshu.com/p/ffc6cbfa759b)
+- [圣杯布局和双飞翼布局的理解和区别](https://www.cnblogs.com/lovemomo/p/4885866.html)
+
+</details>
+
+<details>
+<summary>CSS Grid布局</summary>
+
+#### 参考
+
+- [CSS 网格布局学习指南](https://blog.jirengu.com/?p=990)
+
+</details>
+
+<details>
+<summary>CSS Table布局</summary>
+
+#### 参考
+
+- [html5 div布局与table布局](https://blog.csdn.net/csdn9_14/article/details/53177614)
+
+</details>
