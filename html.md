@@ -28,3 +28,17 @@
 - [iframe 的问题](https://github.com/zanjs/awesome-frontend-interview/issues/9)
 
 </details>
+
+<details>
+<summary>BFC (Block Formatting Context)</summary>
+
+> BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素，同样的，外面的元素也不会影响到容器里面的子元素
+
+个人理解为 HTML布局、css样式的作用域隔离，作用域内的元素不受外部影响，外部也不会影响到内部
+
+#### 参考
+
+- [学习 BFC (Block Formatting Context)](https://juejin.im/post/59b73d5bf265da064618731d)
+- [什么是BFC？对bfc的简单理解](http://www.php.cn/div-tutorial-371936.html)
+
+</details>

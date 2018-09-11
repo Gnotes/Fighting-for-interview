@@ -102,12 +102,3 @@
 - [JS 跨域问题常见的五种解决方式](https://www.cnblogs.com/imwtr/p/4764123.html)
 
 </details>
-
-<details>
-<summary>BFC (Block Formatting Context)</summary>
-
-#### 参考
-
-- [学习 BFC (Block Formatting Context)](https://juejin.im/post/59b73d5bf265da064618731d)
-
-</details>
