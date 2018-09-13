@@ -932,3 +932,51 @@ const unique = arr => arr.filter(i => arr.indexOf(i) === arr.lastIndexOf(i));
 - [30-seconds-of-code](https://github.com/kujian/30-seconds-of-code#filternonunique)
 
 </details>
+
+<details>
+<summary>从原型到原型链</summary>
+
+`prototype` `__proto__` 是属性，并不是原型；`prototype` 是构造函数上的属性，而 `__proto__` 是实例对象上的属性; 而 构造的`prototype`属性指向的是一个对象，而这个对象才是原型，而实例对象的`__proto__`属性也是执行这个原型
+
+即： `构造.prototype` === `原型` === `实例.__proto__`
+
+而原型有一个 `constructor` 属性，这个属性指向的又是构造，因此又有了 
+
+`原型.constructor` === `构造`,也有了下边的推导：
+
+`原型.constructor` === `构造` === `构造.prototype.constructor` === `实例.__proto__.constructor`
+
+#### 参考
+
+- [JavaScript深入系列](https://github.com/mqyqingfeng/Blog/issues/2)
+
+</details>
+
+<details>
+<summary>静态作用域和动态作用域</summary>
+
+> 一个概念 静态作用域 即是 `词法作用域`
+
+- JavaScript 采用的是`词法作用域`，函数的作用域在函数定义的时候就决定了
+- 相对于静态的`动态作用域`，动态的作用域是在函数执行的时候决定的.
+
+**变量提升**： 提升的是`声明`，不包含初始操作，如
+
+```js
+f(); 
+var scope = "local scope"; 
+function f() { return ; } // 这里的scope是undefined
+
+// 等价于
+
+function f() {return scope};
+var scope; // 变量提升，提升的只是申明
+f(); // 执行的时候变量并没有赋值，所以是undefined
+scope = "local scope";
+```
+
+#### 参考
+
+- [JavaScript词法作用域和动态作用域](https://github.com/mqyqingfeng/Blog/issues/3)
+
+</details>
