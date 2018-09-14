@@ -417,7 +417,7 @@ head:first-child+body #demo { color:red; } /* IE7+、FF、Chrome、Safari、Oper
 
 > 双飞翼布局是在middle的div里又插入一个div，通过调整内部div的margin值，实现中间栏自适应，内容写到内部div中
 
-> 思路：通过 `float` 浮动，脱离文档流，中间 `100%`, 左边 `-100%`, 右边 `-width` 实现在同一行，然后通过 `position` 左右修正距离，并清除浮动
+> 思路：通过 `float` 浮动，脱离文档流，中间 `100%`, 左边 `-100%`, 右边 `-width` 实现在同一行，然后通过 `position` 左右修正距离，并清除浮动
 
 #### 参考
 
