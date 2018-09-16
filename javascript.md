@@ -1279,3 +1279,37 @@ outter()();
 
 </details>
 
+<details>
+<summary>call和apply的模拟实现</summary>
+
+思路为：
+
+- 将函数赋值给要绑定的 `this` 对象的一个属性
+- 执行这个属性指向的函数
+- 删除该属性
+
+```js
+Function.prototype.call = function(context) {
+  // 首先要获取调用call的函数，用this可以获取
+  context.fn = this; // 将函数赋值给要绑定的 `this` 对象的一个属性
+  context.fn(); // 执行这个属性指向的函数
+  delete context.fn; // 删除该属性
+}
+
+var foo = {
+  value: 1
+};
+
+function bar() {
+  console.log(this.value);
+}
+
+bar.call(foo);
+```
+
+#### 参考
+
+- [JavaScript深入之call和apply的模拟实现](https://github.com/mqyqingfeng/Blog/issues/11)
+
+</details>
+
