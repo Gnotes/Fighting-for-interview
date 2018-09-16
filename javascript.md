@@ -663,10 +663,31 @@ class Child extends Parent { }
 
 > 一个拥有许多变量和绑定了这些变量的环境的表达式（通常是一个函数），因而这些变量也是该表达式的一部分
 
+> 闭包 = 函数 + 函数能够访问的自由变量  
+> 自由变量是指在函数中使用的，但既不是函数参数也不是函数的局部变量的变量
+
+**从技术的角度讲，所有的JavaScript函数都是闭包**
+
+```js
+var a = 1;
+
+function foo() {
+  console.log(a);
+}
+
+foo();
+```
+
+> foo 函数可以访问变量 a，但是 a 既不是 foo 函数的局部变量，也不是 foo 函数的参数，所以 a 就是自由变量。  
+> 那么，函数 foo + foo 函数访问的自由变量 a 不就是构成了一个闭包嘛
+
+因此这也就能解释为什么 `所有的JavaScript函数都是闭包`
+
 #### 参考
 
 - [全面理解Javascript闭包和闭包的几种写法及用途](https://www.cnblogs.com/yunfeifei/p/4019504.html)
 - [学习Javascript闭包（Closure）](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
+- [JavaScript深入之闭包](https://github.com/mqyqingfeng/Blog/issues/9)
 
 </details>
 
@@ -1225,5 +1246,18 @@ outter()();
 #### 参考
 
 - [JavaScript深入之作用域链](https://github.com/mqyqingfeng/Blog/issues/6)
+- [JavaScript深入之执行上下文](https://github.com/mqyqingfeng/Blog/issues/8)
 
 </details>
+
+<details>
+<summary>从ECMAScript规范解读this</summary>
+
+还理解不了😅
+
+#### 参考
+
+- [JavaScript深入之从ECMAScript规范解读this](https://github.com/mqyqingfeng/Blog/issues/7)
+
+</details>
+
