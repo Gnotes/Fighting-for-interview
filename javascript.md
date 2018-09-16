@@ -1136,3 +1136,94 @@ foo = 1; // foo 被重新赋值为变量的值
 - [JavaScript深入之变量对象](https://github.com/mqyqingfeng/Blog/issues/5)
 
 </details>
+
+<details>
+<summary>作用域链</summary>
+
+> 当查找变量的时候，会先从当前上下文的变量对象中查找，如果没有找到，就会从父级(词法层面上的父级)执行上下文的变量对象中查找，一直找到全局上下文的变量对象，也就是全局对象。这样由多个执行上下文的变量对象构成的链表就叫做作用域链
+
+个人理解为：作用域链就是保存了当前上下文，和所有父级(词法层面父级)上下文的一个栈集合，而这个上下文环境是使用 `VO` 对象保存，而在函数具体的执行阶段(执行代码的时候) ，由 `VO` 转化成 `AO`，而这个作用域链会在函数中使用一个叫 `Scope` 的属性定义，`Scope` 就是当前函数能访问的所有上下文的集合数组，因此函数能根据这个集合查找自己能访问的属性或变量
+
+如原文例子：
+
+```js
+function foo() {
+  function bar() {
+    ...
+  }
+}
+```
+
+1. 第一步：`foo` 函数进入到函数声明，形参初始化，变量声明的阶段，这个时候呢，会创建 `VO`对象，并保存当前函数能访问的`VO`引用到上下文中的 `Scope`，最外层始终是有一个 `全局VO` 的，不然我们怎么能在函数内部访问到全局变量和函数呢，即
+
+```js
+// foo 的 VO 对象
+VO = {
+  arguments: {...},
+  bar: undefined,
+  this,
+}
+```
+
+```js
+ECStack = [
+  fooContext:{
+    Scope:[global.VO]
+  },
+  globalContext,
+]
+```
+
+2. 函数 `foo` 执行的时候，会先做好准备工作（预编译吧），VO 变成 `AO`，并在这个阶段完成变量赋值等初始操作，并且 把当前函数的作用域保存到 上下文的作用域链 `Scope` 当中,即
+
+```js
+ECStack = [
+  fooContext:{
+    Scope:[foo.AO, global.VO]
+  },
+  globalContext:{
+    Scope:[global.VO]
+  },
+]
+```
+
+至于为什么在函数执行阶段的准备阶段，才进行当前作用域链的拷贝工作，个人理解为在之前的阶段（声明阶段），函数自己都不知道能访问到哪些东西，因为申明阶段的所有变量都是 `undefined`,因此在 `完成准备阶段之后，执行代码之前`，保存当前上下文的引用到作用域链，那么接下来执行代码的时候就能够通过作用域链访问到所有定义过的属性或方法
+
+3. 在 `foo` 进入上下文，foo内部函数声明阶段的时候，`bar` 函数被申明，那么`bar` 的 `AO` 被创建，同样的也会保留自己能访问到的所有父级上下文到自己上下文的 `Scope` ，即
+
+```js
+ECStack = [
+  barContext:{
+    Scope:[bar.AO, foo.VO, global.VO]
+  },
+  fooContext:{
+    Scope:[foo.AO, global.VO]
+  },
+  globalContext:{
+    Scope:[global.VO]
+  },
+]
+```
+
+有点比较重要的是 `只有当函数执行的时候才会进行压栈的操作`，上边的 `ECStack` 只是为了展示 `Scope` 保存的内容  
+
+其次，在我们的 `闭包` 操作当中，内部函数(`bar`)在外部函数(`foo`)执行结束后，任能继续访问外部函数定义的变量，那也是因为 `内部函数` 的上下文中作用域链保存了外部函数的 `AO` 对象，即使 外部函数已经执行完毕，并外部上下文被销毁，但由于还保留着对外部 `AO` 的引用，内存中数据并没有销毁，因此也是能够访问的，那么如下闭包的例子也就能解释了
+
+```js
+function outter() {
+  var param = 1;
+  function inner() {
+    console.log(param)
+  }
+
+  return inner;
+}
+
+outter()();
+```
+
+#### 参考
+
+- [JavaScript深入之作用域链](https://github.com/mqyqingfeng/Blog/issues/6)
+
+</details>
