@@ -610,6 +610,7 @@ a3 != a3 // true
 #### 参考
 
 - [js创建对象的多种方式及优缺点](https://www.cnblogs.com/cythia/p/6958021.html)
+- [JavaScript深入之创建对象的多种方式以及优缺点](https://github.com/mqyqingfeng/Blog/issues/15)
 
 </details>
 
@@ -648,6 +649,7 @@ class Child extends Parent { }
 #### 参考
 
 - [js中实现继承的几种方式](https://www.cnblogs.com/diligentYe/p/6413450.html)
+- [JavaScript深入之继承的多种方式和优缺点](https://github.com/mqyqingfeng/Blog/issues/16)
 
 </details>
 
@@ -1310,6 +1312,57 @@ bar.call(foo);
 #### 参考
 
 - [JavaScript深入之call和apply的模拟实现](https://github.com/mqyqingfeng/Blog/issues/11)
+
+</details>
+
+<details>
+<summary>类数组对象与arguments</summary>
+
+#### 参考
+
+- [JavaScript深入之类数组对象与arguments](https://github.com/mqyqingfeng/Blog/issues/14)
+
+</details>
+
+</details>
+
+<details>
+<summary>创建对象的多种方式以及优缺点</summary>
+
+4.1
+
+```js
+function Person(name) {
+    this.name = name;
+    if (typeof this.getName != "function") {
+        Person.prototype = {
+            constructor: Person,
+            getName: function () {
+                console.log(this.name);
+            }
+        }
+    }
+}
+
+var person1 = new Person('kevin');
+var person2 = new Person('daisy');
+
+// 报错 并没有该方法
+person1.getName();
+
+// 注释掉上面的代码，这句是可以执行的。
+person2.getName();
+```
+
+个人对于原文这个示例的理解：
+
+> 讨论中有个示例图，解释的比较清楚的一点是：js创建一个对象时是 `先建立原型关系`，而 `后执行构造函数`  
+那么在 `第一个` `var person1= new Person('Kevin')` 调用的时候，函数(类)的 `Person.prototype` 还并没有被修改，然后再执行类似 `Person.apply(obj)` 的操作，在这个apply操作中，构造被执行，那么 `if` 里边的内容被执行，然后 `Person.prototype` 才被修改，指向新的一个字面量对象，
+重点是，这个时候 `person1` 的原型还是指向的被 `修改之前` 的 `Person.prototype`，而在第二次 `var person2 = new Person('Daisy')` 的时候，`Person.prototype` 已经被修改，因此 `person1` 原型上是没有 `getName`，而 `person2` 可以正常调用
+
+#### 参考
+
+- [JavaScript深入之创建对象的多种方式以及优缺点](https://github.com/mqyqingfeng/Blog/issues/15)
 
 </details>
 
