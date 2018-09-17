@@ -1430,7 +1430,7 @@ Child.prototype = new F();
 Child.prototype = Parent.prototype;
 ```
 
-这两种方式，区别在于下边一种是将Child的原型直接指向了Parent的原型，因此在修改Child.prototype的时候，是会修改到Parent.prototype，因此这两个指向的是同一个对象(原型是一个对象)，而使用 `F` 中间函数的方式，我的理解为 Child的原型指向`F` 的实例，而实例 `new F()` 的原型才是指向 `Parent.prototype` ，因此如下图：
+这两种方式，区别在于下边一种是将Child的原型直接指向了Parent的原型，因此在修改Child.prototype的时候，是会修改到Parent.prototype，因为这两个指向的是同一个对象(原型是一个对象)，而使用 `F` 中间函数的方式，我的理解为 Child的原型指向`F` 的实例，而实例 `new F()` 的原型才是指向 `Parent.prototype` ，因此如下图：
 
 ```
 Child.prototype -> `new F()`: F实例 -- F实例.__proto__ --> Parent.prototype -> {}:Parent的原型
