@@ -1324,8 +1324,6 @@ bar.call(foo);
 
 </details>
 
-</details>
-
 <details>
 <summary>创建对象的多种方式以及优缺点</summary>
 
@@ -1363,6 +1361,88 @@ person2.getName();
 #### 参考
 
 - [JavaScript深入之创建对象的多种方式以及优缺点](https://github.com/mqyqingfeng/Blog/issues/15)
+
+</details>
+
+<details>
+<summary>继承的多种方式和优缺点</summary>
+
+对于原文示例 6 寄生组合式继承，及直接写 `Child.prototype = Parent.prototype;` 的方式的理解
+
+```js
+function Parent (name) {
+    this.name = name;
+    this.colors = ['red', 'blue', 'green'];
+}
+
+Parent.prototype.getName = function () {
+    console.log(this.name)
+}
+
+function Child (name, age) {
+    Parent.call(this, name);
+    this.age = age;
+}
+
+Child.prototype = new Parent();
+
+var child1 = new Child('kevin', '18');
+```
+
+```js
+function Parent (name) {
+    this.name = name;
+    this.colors = ['red', 'blue', 'green'];
+}
+
+Parent.prototype.getName = function () {
+    console.log(this.name)
+}
+
+function Child (name, age) {
+    Parent.call(this, name);
+    this.age = age;
+}
+
+// 关键的三步
+var F = function () {};
+
+F.prototype = Parent.prototype;
+
+Child.prototype = new F();
+
+
+var child1 = new Child('kevin', '18');
+```
+
+这关键的第三步，个人这样理解的
+
+> 第一种方式 `Child.prototype = new Parent()`，Child的原型直接指向的是Parent的 `实例`，这种方式会调用两次 Parent 构造这一点毋庸置疑，有意思的是修改为
+
+```js
+// 关键的三步
+var F = function () {};
+F.prototype = Parent.prototype;
+Child.prototype = new F();
+```
+
+```js
+Child.prototype = Parent.prototype;
+```
+
+这两种方式，区别在于下边一种是将Child的原型直接指向了Parent的原型，因此在修改Child.prototype的时候，是会修改到Parent.prototype，因此这两个指向的是同一个对象(原型是一个对象)，而使用 `F` 中间函数的方式，我的理解为 Child的原型指向`F` 的实例，而实例 `new F()` 的原型才是指向 `Parent.prototype` ，因此如下图：
+
+```
+Child.prototype -> `new F()`: F实例 -- F实例.__proto__ --> Parent.prototype -> {}:Parent的原型
+```
+
+那么在修改 Child.prototype 的时候，其实是在 `实例F` 上修改而已，没有直接在Parent.prototype 上修改
+
+可以理解为在 Child 和 Parent 之间添加了一个 `中间层` ，但是这并没有破坏原型的继承
+
+#### 参考
+
+- [JavaScript深入之继承的多种方式和优缺点](https://github.com/mqyqingfeng/Blog/issues/16)
 
 </details>
 
