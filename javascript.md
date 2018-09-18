@@ -19,6 +19,8 @@ typeof 一般只能返回如下几个结果:
 #### 参考
 
 - [JS中typeof与instanceof的区别](https://www.cnblogs.com/Trr-984688199/p/6180040.html)
+- [JavaScript专题之类型判断(上)](https://github.com/mqyqingfeng/Blog/issues/28)
+- [JavaScript专题之类型判断(下)](https://github.com/mqyqingfeng/Blog/issues/30)
 
 </details>
 
@@ -781,6 +783,7 @@ function deepClone(obj){
 #### 参考
 
 - [JS 深拷贝](https://www.cnblogs.com/echolun/p/7889848.html)
+- [JavaScript专题之深浅拷贝](https://github.com/mqyqingfeng/Blog/issues/32)
 
 </details>
 
@@ -953,6 +956,7 @@ const unique = arr => arr.filter(i => arr.indexOf(i) === arr.lastIndexOf(i));
 #### 参考
 
 - [30-seconds-of-code](https://github.com/kujian/30-seconds-of-code#filternonunique)
+- [JavaScript专题之数组去重](https://github.com/mqyqingfeng/Blog/issues/27)
 
 </details>
 
