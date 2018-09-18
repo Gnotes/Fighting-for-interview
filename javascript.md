@@ -1446,3 +1446,51 @@ Child.prototype -> `new F()`: F实例 -- F实例.__proto__ --> Parent.prototype 
 
 </details>
 
+<details>
+<summary>防抖函数和节流函数</summary>
+
+概念解释
+
+- 函数防抖: 频繁触发,一段时间内没有重复触发，才会执行一次函数
+- 函数节流: 频繁触发,一段时间内只执行一次函数
+
+防抖原理：`clearTimeout & setTimeout` 的运用
+
+```js
+function debounce(func, wait) {
+  var timeout;
+  return function () {
+    clearTimeout(timeout)
+    timeout = setTimeout(func, wait);
+  }
+}
+```
+
+节流原理：函数 `执行标示` + `clearTimeout & setTimeout` 的运用
+
+```js
+function throttle(func, wait) {
+  var timeout;
+  var previous = 0;
+
+  return function() {
+    context = this;
+    args = arguments;
+    if (!timeout) { // 执行过后 timeout 是有值的，直到被赋值 null
+      timeout = setTimeout(function(){
+        timeout = null; // 关键操作
+        func.apply(context, args)
+      }, wait)
+    }
+  }
+}
+```
+
+#### 参考
+
+- [JavaScript专题之跟着underscore学防抖](https://github.com/mqyqingfeng/Blog/issues/22)
+- [JavaScript专题之跟着underscore学节流](https://github.com/mqyqingfeng/Blog/issues/26)
+- [js函数节流和函数防抖](https://www.cnblogs.com/fanfan-code/p/6400282.html)
+
+</details>
+
