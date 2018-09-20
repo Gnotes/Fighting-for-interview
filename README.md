@@ -41,3 +41,4 @@
 - [Front-end-course](https://github.com/hyy1115/Front-end-course)
 - [deep-into-node](https://github.com/yjhjstz/deep-into-node)
 - [Airen的博客 | 大漠](https://www.w3cplus.com/blogs/airen)
+- [JS 函数式编程指南中文版](https://github.com/llh911001/mostly-adequate-guide-chinese)

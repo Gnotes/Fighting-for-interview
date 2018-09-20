@@ -1498,3 +1498,45 @@ function throttle(func, wait) {
 
 </details>
 
+<details>
+<summary>函数柯里化</summary>
+
+> 柯里化是一种将使用多个参数的一个函数转换成一系列使用一个参数的函数的技术  
+即：`1` 个 `n元` 的函数，转化为 `n` 个 `1元` 的函数
+
+#### 参考
+
+- [JavaScript专题之函数柯里化](https://github.com/mqyqingfeng/Blog/issues/42)
+
+</details>
+
+<details>
+<summary>函数参数长度</summary>
+
+- `函数.length` 为函数形参个数
+- `arguments` 执行时实参个数
+
+```js
+var fun = function(a, b){
+  console.log(arguments.length);
+}
+
+fun.length; // 2
+fun(1, 2 , 3) // 3
+```
+
+#### 参考
+
+- [JavaScript专题之函数柯里化 | issuecomment](https://github.com/mqyqingfeng/Blog/issues/42#issuecomment-362534423)
+</details>
+
+<details>
+<summary>偏函数</summary>
+
+> 将一个 `n元` 函数转换成一个 `n - x 元` 函数
+
+#### 参考
+
+- [JavaScript专题之偏函数](https://github.com/mqyqingfeng/Blog/issues/43)
+</details>
+
