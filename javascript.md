@@ -1540,3 +1540,59 @@ fun(1, 2 , 3) // 3
 - [JavaScript专题之偏函数](https://github.com/mqyqingfeng/Blog/issues/43)
 </details>
 
+<details>
+<summary>惰性函数</summary>
+
+- 非惰性函数写法
+
+```js
+function addEvent (type, el, fn) {
+    if (window.addEventListener) {
+        el.addEventListener(type, fn, false);
+    }
+    else if(window.attachEvent){
+        el.attachEvent('on' + type, fn);
+    }
+}
+```
+
+- 惰性函数写法
+
+```js
+function addEvent (type, el, fn) {
+    if (window.addEventListener) {
+        addEvent = function (type, el, fn) {
+            el.addEventListener(type, fn, false);
+        }
+    }
+    else if(window.attachEvent){
+        addEvent = function (type, el, fn) {
+            el.attachEvent('on' + type, fn);
+        }
+    }
+    
+    addEvent(type, el, fn);
+}
+```
+
+> 当我们每次都需要进行条件判断，其实只需要判断一次，接下来的使用方式都不会发生改变的时候，想想是否可以考虑使用惰性函数
+
+两种写法对比分析：
+
+> 惰性函数优势在于，再次执行时，并不需要再次判断，而是在第一次执行函数过程中，就将当前正确的方法重新赋值给了当前函数，那这样就可以减低执行时间，因此也是对函数的一种优化，之所以在函数内部执行一次函数 `addEvent` ，是因为第一次执行函数的时候 `if else` 只是对 `addEvent` 做了处理，并没有对 当前执行函数进行操作，因此在重新执行一次，即可达到在执行函数的同时并对函数进行惰性操作
+
+#### 参考
+
+- [JavaScript专题之惰性函数](https://github.com/mqyqingfeng/Blog/issues/44)
+</details>
+
+<details>
+<summary>函数组合</summary>
+
+还不能完全理解 😓 ，但这种方式将一个复杂的函数，颗粒化为多个简单的函数，这样可以提高代码复用和降低耦合，并且逻辑也更加清晰
+
+#### 参考
+
+- [JavaScript专题之函数组合](https://github.com/mqyqingfeng/Blog/issues/45)
+</details>
+
