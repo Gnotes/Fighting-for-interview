@@ -42,3 +42,5 @@
 - [deep-into-node](https://github.com/yjhjstz/deep-into-node)
 - [Airen的博客 | 大漠](https://www.w3cplus.com/blogs/airen)
 - [JS 函数式编程指南中文版](https://github.com/llh911001/mostly-adequate-guide-chinese)
+- [深入理解 JavaScript 异步](https://github.com/wangfupeng1988/js-async-tutorial)
+- [深入理解javascript原型和闭包系列](http://www.cnblogs.com/wangfupeng1988/p/4001284.html)
