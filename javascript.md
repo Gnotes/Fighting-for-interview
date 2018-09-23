@@ -900,6 +900,8 @@ var fn = function(arg) {
 #### 参考
 
 - [教你使用javascript简单写一个页面模板引擎](https://www.jb51.net/article/65480.htm)
+- [underscore 系列之实现一个模板引擎(上)](https://github.com/mqyqingfeng/Blog/issues/63)
+- [underscore 系列之实现一个模板引擎(下)](https://github.com/mqyqingfeng/Blog/issues/70)
 
 </details>
 
