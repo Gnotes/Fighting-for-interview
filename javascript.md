@@ -1815,3 +1815,73 @@ var $ = _.noConflict(); // _ 对象那么就通过 $ 接收了
 - [underscore 系列之防冲突与 Utility Functions](https://github.com/mqyqingfeng/Blog/issues/62)
 </details>
 
+<details>
+<summary>let 和 const</summary>
+
+> 为了加强对变量生命周期的控制，ECMAScript 6 引入了块级作用域
+
+let 和 const 的特点
+
+- 不会被提升
+- 重复声明报错
+- 不绑定全局作用域
+- const是指向地址不能被修改，如果const定义的是对象，那么对象的属性还是可以被修改的
+
+```js
+const obj = { prop: ''};
+obj.prop = 'some value';
+```
+
+#### 参考
+
+- [ES6 系列之 let 和 const](https://github.com/mqyqingfeng/Blog/issues/82)
+</details>
+
+<details>
+<summary>暂时性死区</summary>
+
+> ES6明确规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。在代码块内，使用let命令声明变量之前，该变量都是不可用的。这在语法上，称为“暂时性死区”（temporal dead zone，简称 TDZ）
+
+```js
+function bar(x = y, y = 2) {
+  return [x, y];
+}
+
+bar(); // 报错
+```
+
+编译之后，因为是严格模式，所有变量必须先声明
+
+```js
+"use strict";
+
+function bar() {
+  var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : y;
+  var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+
+  return [x, y];
+}
+```
+
+#### 参考
+
+- [ES6 系列之 let 和 const](https://github.com/mqyqingfeng/Blog/issues/82)
+- [js中暂时性死区的疑问](https://segmentfault.com/q/1010000008877158)
+
+</details>
+
+<details>
+<summary>箭头函数</summary>
+
+- 没有 this
+- 没有 arguments
+- 不能通过 new 关键字调用
+- 没有原型
+- 没有 super
+
+#### 参考
+
+- [ES6 系列之箭头函数](https://github.com/mqyqingfeng/Blog/issues/85)
+
+</details>
+

@@ -46,3 +46,4 @@
 - [深入理解javascript原型和闭包系列](http://www.cnblogs.com/wangfupeng1988/p/4001284.html)
 - [hanzichi | Underscore Analysis](https://github.com/hanzichi/underscore-analysis)
 - [yoyoyohamapi | undersercore 源码分析](https://legacy.gitbook.com/book/yoyoyohamapi/undersercore-analysis/details)
+- [ECMAScript 6 入门 | 阮一峰](http://es6.ruanyifeng.com/)
