@@ -1715,3 +1715,103 @@ function shuffle(a) {
 - [JavaScript专题之乱序](https://github.com/mqyqingfeng/Blog/issues/51)
 </details>
 
+<details>
+<summary>工具库封装</summary>
+
+有如下几个知识点：
+
+- `root` 挂载
+
+```js
+var root = (typeof self == 'object' && self.self == self && self) ||
+           (typeof global == 'object' && global.global == global && global) ||
+           this ||
+           {};
+
+var _ = function() {}
+
+root._ = _;
+```
+
+- 面向对象和面向函数的实现
+
+示例写法：
+
+```js
+// 函数式风格
+_.each([1, 2, 3], function(item){
+    console.log(item)
+});
+
+// 面向对象风格
+_([1, 2, 3]).each(function(item){
+    console.log(item)
+});
+```
+
+实现方式：
+
+```js
+var _ = function(obj) {
+    if (!(this instanceof _)) return new _(obj);
+    this._wrapped = obj;
+};
+```
+
+- 内部值缓存
+
+```js
+this._wrapped = obj;
+```
+
+- 函数方法挂载到函数原型
+
+> 遍历函数上的方法然后赋值给函数原型
+
+```js
+_.prototype[func] = function() {
+    var args = [this._wrapped];
+    Array.prototype.push.apply(args, arguments);
+    return func.apply(_, args);
+};
+```
+
+- 链式调用
+
+> 原理：`return` 当前函数对象，而不是直接返回结果，结果通过单独的方法调用，如 `vlaue`
+
+```js
+_.fun = function (obj) {
+    var instance = _(obj);
+    instance._chain = true;
+    return instance;
+};
+
+_.prototype.value = function (){
+  return this._wrapped;
+}
+```
+
+- 防冲突函数
+
+> 原理为先缓存冲突之前的值，然后将缓存之前的值重新赋值给冲突的变量，最后将当前工具函数对象，直接返回给接收的全局变量
+
+```js
+// 源码一开始的时候便储存之前的 _ 对象
+var previousUnderscore = root._; // 假设root为window对象，即 window._; 那么previousUnderscore即缓存了之前的window._对象
+
+_.noConflict = function() {
+    root._ = previousUnderscore; // 执行函数时就将window._ = 重新赋值回去了
+    return this; // 返回this 就是返回了当前函数对象，即 _ ;
+};
+
+var $ = _.noConflict(); // _ 对象那么就通过 $ 接收了
+```
+
+#### 参考
+
+- [underscore 系列之如何写自己的 underscore](https://github.com/mqyqingfeng/Blog/issues/56)
+- [underscore 系列之链式调用](https://github.com/mqyqingfeng/Blog/issues/57)
+- [underscore 系列之防冲突与 Utility Functions](https://github.com/mqyqingfeng/Blog/issues/62)
+</details>
+
