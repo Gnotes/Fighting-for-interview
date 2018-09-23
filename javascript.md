@@ -1591,7 +1591,7 @@ function addEvent (type, el, fn) {
 <details>
 <summary>函数组合</summary>
 
-还不能完全理解 😓 ，但这种方式将一个复杂的函数，颗粒化为多个简单的函数，这样可以提高代码复用和降低耦合，并且逻辑也更加清晰
+还不能完全理解 😓 ，但这种方式将一个复杂的函数，颗粒化为多个简单的函数，这样可以提高代码复用和降低耦合，并且逻辑也更加清晰
 
 #### 参考
 
@@ -1680,7 +1680,7 @@ function InsertionSort(a, from, to) {
         var element = a[i];
         for (var j = i - 1; j >= from; j--) {
             var tmp = a[j];
-            // comparefn，如果这个比较函数，使用 `Math.ramdom - 0.5` 的话，就存在乱序不完整的问题
+            // comparefn，如果这个比较函数，使用 `Math.ramdom - 0.5` 的话，就存在乱序不完整的问题
             var order = comparefn(tmp, element);
             if (order > 0) {
                 a[j + 1] = tmp;
@@ -1758,7 +1758,7 @@ var _ = function(obj) {
 };
 ```
 
-- 内部值缓存
+- 内部值缓存
 
 ```js
 this._wrapped = obj;
@@ -1778,7 +1778,7 @@ _.prototype[func] = function() {
 
 - 链式调用
 
-> 原理：`return` 当前函数对象，而不是直接返回结果，结果通过单独的方法调用，如 `vlaue`
+> 原理：`return` 当前函数对象，而不是直接返回结果，结果通过单独的方法调用，如 `vlaue`
 
 ```js
 _.fun = function (obj) {
@@ -1802,7 +1802,7 @@ var previousUnderscore = root._; // 假设root为window对象，即 window._; �
 
 _.noConflict = function() {
     root._ = previousUnderscore; // 执行函数时就将window._ = 重新赋值回去了
-    return this; // 返回this 就是返回了当前函数对象，即 _ ;
+    return this; // 返回this 就是返回了当前函数对象，即 _ ;
 };
 
 var $ = _.noConflict(); // _ 对象那么就通过 $ 接收了
@@ -1825,7 +1825,7 @@ let 和 const 的特点
 - 不会被提升
 - 重复声明报错
 - 不绑定全局作用域
-- const是指向地址不能被修改，如果const定义的是对象，那么对象的属性还是可以被修改的
+- const是指向地址不能被修改，如果const定义的是对象，那么对象的属性还是可以被修改的
 
 ```js
 const obj = { prop: ''};
