@@ -1885,3 +1885,39 @@ function bar() {
 
 </details>
 
+<details>
+<summary>属性类型</summary>
+
+> 数据属性包含一个数据值的位置，在这个位置可以读取和写入值，数据属性有4个描述其行为的特性
+
+- Configurable
+- Enumerable
+- Writable
+- Value
+
+*Object.defineProperty定义对象的属性 Configurable、Enumerable、Writable默认值都是false，而Value没有设置则是undefined*
+
+#### 访问器属性
+
+> 访问器属性不包括数据值，包含一堆getter和setter函数（这两个函数不是必须的）。在读取属性的时，会调用getter函数，这个函数负责返回有效值，在写入访问器属性时，会调用getter函数并传入新值，这个函数负责决定如何处理数据。分别有以下属性
+
+- Configurable
+- Enumerable
+- Get
+- Set
+
+#### 参考
+
+- [qianlongo/professional-js](https://github.com/qianlongo/professional-js/blob/master/%E7%AC%AC6%E7%AB%A0-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1.md#611-%E5%B1%9E%E6%80%A7%E7%B1%BB%E5%9E%8B)
+
+</details>
+
+<details>
+<summary>事件</summary>
+
+#### 参考
+
+- [qianlongo/professional-js](https://github.com/qianlongo/professional-js/blob/master/%E7%AC%AC13%E7%AB%A0-%E4%BA%8B%E4%BB%B6.md)
+
+</details>
+
