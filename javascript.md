@@ -1598,3 +1598,120 @@ function addEvent (type, el, fn) {
 - [JavaScript专题之函数组合](https://github.com/mqyqingfeng/Blog/issues/45)
 </details>
 
+<details>
+<summary>函数记忆(缓存函数)</summary>
+
+> 原理上把参数和对应的结果数据存到一个对象中，调用时，判断参数对应的数据是否存在，存在就返回对应的结果数据
+
+```js
+var memoize = function(func, hasher) {
+    var memoize = function(key) {
+        var cache = memoize.cache;
+        var address = '' + (hasher ? hasher.apply(this, arguments) : key);
+        if (!cache[address]) {
+            cache[address] = func.apply(this, arguments);
+        }
+        return cache[address];
+    };
+    memoize.cache = {};
+    return memoize;
+};
+
+var add = function(a, b, c) {
+  return a + b + c;
+}
+
+var memoizedAdd = memoize(add, function(){
+    var args = Array.prototype.slice.call(arguments)
+    return JSON.stringify(args)
+})
+
+memoizedAdd(1, 2, 3)
+```
+
+#### 参考
+
+- [JavaScript专题之函数记忆](https://github.com/mqyqingfeng/Blog/issues/46)
+</details>
+
+<details>
+<summary>递归</summary>
+
+- 尾调用
+
+> 尾调用，是指函数内部的最后一个动作是函数调用。该调用的返回值，直接返回给函数
+
+```js
+// 尾调用
+function f(x){
+    return g(x);
+}
+
+// 非尾调用
+function f(x){
+    return g(x) + 1; // g(x) 的返回值还需要跟 1 进行计算后，f(x)才会返回值，因此这个不是尾调用
+}
+```
+
+*由于 **尾调用** 对于函数执行上下文栈，在 `return` 操作时会先弹出父级上下文栈，因此在递归函数执行优化方面有优势*
+
+```js
+ECStack.push(<f> functionContext);
+ECStack.pop();
+ECStack.push(<g> functionContext);
+ECStack.pop();
+```
+
+#### 参考
+
+- [JavaScript专题之递归](https://github.com/mqyqingfeng/Blog/issues/49)
+</details>
+
+<details>
+<summary>乱序</summary>
+
+两种排序写法：
+
+- 插入排序
+
+```js
+function InsertionSort(a, from, to) {
+    for (var i = from + 1; i < to; i++) {
+        var element = a[i];
+        for (var j = i - 1; j >= from; j--) {
+            var tmp = a[j];
+            // comparefn，如果这个比较函数，使用 `Math.ramdom - 0.5` 的话，就存在乱序不完整的问题
+            var order = comparefn(tmp, element);
+            if (order > 0) {
+                a[j + 1] = tmp;
+            } else {
+                break;
+            }
+        }
+        a[j + 1] = element;
+    }
+};
+```
+
+- Fisher–Yates
+
+> 原理：当前元素与以后随机位置的元素进行交换
+
+```js
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length; i; i--) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+```
+
+#### 参考
+
+- [JavaScript专题之乱序](https://github.com/mqyqingfeng/Blog/issues/51)
+</details>
+
