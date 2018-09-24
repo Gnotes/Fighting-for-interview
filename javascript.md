@@ -1921,3 +1921,168 @@ function bar() {
 
 </details>
 
+<details>
+<summary>引起内存泄漏的操作有哪些</summary>
+
+- 全局变量引起
+- 闭包引起
+- dom清空，事件未清除
+- 子元素存在引用
+- 被遗忘的计时器
+
+#### 参考
+
+- [huruji/FE-Interview](https://huruji.github.io/FE-Interview/#/docs/JavaScript?id=_1%E5%BC%95%E8%B5%B7%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E7%9A%84%E6%93%8D%E4%BD%9C%E6%9C%89%E5%93%AA%E4%BA%9B)
+
+</details>
+
+<details>
+<summary>使用new操作符实例化一个对象的具体步骤</summary>
+
+1.构造一个新的对象  
+2.将构造函数的作用域赋给新对象（也就是说this指向了新的对象）  
+3.执行构造函数中的代码  
+4.返回新对象  
+
+#### 参考
+
+- [huruji/FE-Interview](https://huruji.github.io/FE-Interview/#/docs/JavaScript?id=_1%E5%BC%95%E8%B5%B7%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E7%9A%84%E6%93%8D%E4%BD%9C%E6%9C%89%E5%93%AA%E4%BA%9B)
+
+</details>
+
+<details>
+<summary>js如何判断网页中图片加载成功或者失败</summary>
+
+- onload: 事件运行加载成功
+- onerror: 事件判断失败
+
+#### 参考
+
+- [huruji/FE-Interview](https://huruji.github.io/FE-Interview/#/docs/JavaScript?id=_9js%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E6%88%90%E5%8A%9F%E6%88%96%E8%80%85%E5%A4%B1%E8%B4%A5)
+
+</details>
+
+<details>
+<summary>递归和迭代</summary>
+
+> 迭代:利用变量的原值推算出变量的一个新值.如果递归是自己调用自己的话,迭代就是A不停的调用B.
+
+```js
+// 迭代，重复一定的算法，达到想要的目的
+function iteration(x){
+   var sum=1; 
+   for(x; x>=1; x--){
+       sum = sum * x;
+   }
+}
+```
+
+```js
+// 递归
+function recursion(x){
+   if(x>1){
+       return x * recursion(x-1);
+   }else{
+       return 1;
+   }
+}
+```
+
+#### 参考
+
+- [深究递归和迭代的区别、联系、优缺点及实例对比](https://blog.csdn.net/laoyang360/article/details/7855860)
+- [「递归」和「迭代」有哪些区别](https://www.zhihu.com/question/20278387)
+
+</details>
+
+<details>
+<summary>事件循环</summary>
+
+#### 参考
+
+- [深入浅出Javascript事件循环机制(上)](https://zhuanlan.zhihu.com/p/26229293)
+- [深入浅出Javascript事件循环机制(下)](https://zhuanlan.zhihu.com/p/26238030)
+
+</details>
+
+<details>
+<summary>JavaScript严格模式</summary>
+
+- 不允许不使用var关键字去创建全局变量，抛出ReferenceError
+- 不允许对变量使用delete操作符，抛ReferenceError
+- 不可对对象的只读属性赋值，不可对对象的不可配置属性使用delete操作符，不可为不可拓展的对象添加属性，均抛TypeError
+- 对象属性名必须唯一
+- 函数中不可有重名参数
+- 在函数内部对修改参数不会反映到arguments中
+- 淘汰arguments.callee和arguments.caller
+- 不可在if内部声明函数
+- 抛弃with语句
+
+#### 参考
+
+- [JavaScript严格模式下有哪些不同？](https://huruji.github.io/FE-Interview/#/docs/JavaScript?id=_17javascript%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%9C%89%E5%93%AA%E4%BA%9B%E4%B8%8D%E5%90%8C%EF%BC%9F)
+
+</details>
+
+<details>
+<summary>setTimeout和setInterval的区别，包含内存方面的分析</summary>
+
+> setTimeout表示间隔一段时间之后执行一次调用，而setInterval则是每间隔一段时间循环调用，直至clearInterval结束。 内存方面，setTimeout只需要进入一次队列，不会造成内存溢出，setInterval因为不计算代码执行时间，有可能同时执行多次代码， 导致内存溢出
+
+#### 参考
+
+- [setTimeout和setInterval的区别，包含内存方面的分析？](https://huruji.github.io/FE-Interview/#/docs/JavaScript?id=_18settimeout%E5%92%8Csetinterval%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%8C%E5%8C%85%E5%90%AB%E5%86%85%E5%AD%98%E6%96%B9%E9%9D%A2%E7%9A%84%E5%88%86%E6%9E%90%EF%BC%9F)
+
+</details>
+
+<details>
+<summary>同源策略</summary>
+
+> 同源策略是指只有具有相同源的页面才能够共享数据，比如cookie，同源是指页面具有相同的协议、域名、端口号，有一项不同就不是同源。 有同源策略能够保证web网页的安全性
+
+#### 参考
+
+- [同源策略是什么？](https://huruji.github.io/FE-Interview/#/docs/JavaScript?id=_19%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F)
+
+</details>
+
+<details>
+<summary>如何阻止事件冒泡和默认事件</summary>
+
+> 标准的DOM对象中可以使用事件对象的stopPropagation()方法来阻止事件冒泡，但在IE8以下中IE的事件对象通过设置事件对象的cancelBubble属性为true来阻止冒泡； 默认事件的话通过事件对象的preventDefault()方法来阻止，而IE通过设置事件对象的returnValue属性为false来阻止默认事件
+
+#### 参考
+
+- [如何阻止事件冒泡和默认事件？](https://huruji.github.io/FE-Interview/#/docs/JavaScript?id=_21%E5%A6%82%E4%BD%95%E9%98%BB%E6%AD%A2%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E5%92%8C%E9%BB%98%E8%AE%A4%E4%BA%8B%E4%BB%B6%EF%BC%9F)
+
+</details>
+
+<details>
+<summary>addEventListener有哪些参数</summary>
+
+> 有三个参数，第一个是事件的类型，第二个是事件的回调函数，第三个是一个表示事件是冒泡阶段还是捕获阶段捕获的布尔值，true表示捕获，false表示冒泡
+
+#### 参考
+
+- [addEventListener有哪些参数](https://huruji.github.io/FE-Interview/#/docs/JavaScript?id=_22addeventlistener%E6%9C%89%E5%93%AA%E4%BA%9B%E5%8F%82%E6%95%B0%EF%BC%9F)
+
+</details>
+
+<details>
+<summary>排序算法（桶排序、冒泡排序、快速排序）</summary>
+
+#### 参考
+
+- [排序算法（桶排序、冒泡排序、快速排序）](https://blog.csdn.net/qqchenjian318/article/details/69603893)
+
+</details>
+
+<details>
+<summary>如何实现一个双向数据绑定</summary>
+
+#### 参考
+
+- [如何实现一个双向数据绑定](http://www.sohu.com/a/119946121_465979)
+
+</details>
+

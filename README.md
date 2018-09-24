@@ -47,3 +47,4 @@
 - [hanzichi | Underscore Analysis](https://github.com/hanzichi/underscore-analysis)
 - [yoyoyohamapi | undersercore 源码分析](https://legacy.gitbook.com/book/yoyoyohamapi/undersercore-analysis/details)
 - [ECMAScript 6 入门 | 阮一峰](http://es6.ruanyifeng.com/)
+- [huruji | blog](https://github.com/huruji/blog)
