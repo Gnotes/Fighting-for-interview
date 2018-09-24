@@ -2086,3 +2086,12 @@ function recursion(x){
 
 </details>
 
+<details>
+<summary>如何实现一个双向数据绑定</summary>
+
+#### 参考
+
+- [如何实现一个双向数据绑定](http://www.sohu.com/a/119946121_465979)
+
+</details>
+
