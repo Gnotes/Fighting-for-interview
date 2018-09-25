@@ -82,6 +82,7 @@
 #### 参考
 
 - [浏览器输入URL到展示页面过程](https://www.jianshu.com/p/0a2c35e8e2b7)
+- [页面从输入URL到展现发生了什么](https://huruji.github.io/FE-Interview/#/docs/NetWork?id=_1%E9%A1%B5%E9%9D%A2%E4%BB%8E%E8%BE%93%E5%85%A5url%E5%88%B0%E5%B1%95%E7%8E%B0%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88)
 
 </details>
 
@@ -111,15 +112,6 @@
 #### 参考
 
 - [将静态资源放在其他域名的目的是什么](https://huruji.github.io/FE-Interview/#/docs/JavaScript?id=_41%E5%B0%86%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%94%BE%E5%9C%A8%E5%85%B6%E4%BB%96%E5%9F%9F%E5%90%8D%E7%9A%84%E7%9B%AE%E7%9A%84%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F)
-
-</details>
-
-<details>
-<summary>页面从输入URL到展现发生了什么</summary>
-
-#### 参考
-
-- [页面从输入URL到展现发生了什么](https://huruji.github.io/FE-Interview/#/docs/NetWork?id=_1%E9%A1%B5%E9%9D%A2%E4%BB%8E%E8%BE%93%E5%85%A5url%E5%88%B0%E5%B1%95%E7%8E%B0%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88)
 
 </details>
 
