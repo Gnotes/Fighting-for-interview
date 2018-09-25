@@ -169,3 +169,15 @@ WebSocket是HTML5新增的协议，它的目的是在服务器和浏览器之间
 - [前端路由的两种实现原理](https://segmentfault.com/a/1190000007238999)
 
 </details>
+
+<details>
+<summary>渐进增强和优雅降级</summary>
+
+- 渐进增强 ：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。
+- 优雅降级 ：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容
+
+#### 参考
+
+- [渐进增强和优雅降级](https://github.com/HerbertKarajan/Fe-Interview-questions/tree/master/21-Front-end-Interview-questions)
+
+</details>

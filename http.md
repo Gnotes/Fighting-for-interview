@@ -152,3 +152,28 @@
 - [常见的网页性能优化方法](https://huruji.github.io/FE-Interview/#/docs/Performance)
 
 </details>
+
+<details>
+<summary>XML和JSON的区别？</summary>
+
+- 数据体积方面。
+
+JSON相对于XML来讲，数据的体积小，传递的速度更快些。
+
+- 数据交互方面。
+
+JSON与JavaScript的交互更加方便，更容易解析处理，更好的数据交互。
+
+- 数据描述方面。
+
+JSON对数据的描述性比XML较差。
+
+- 传输速度方面。
+
+JSON的速度要远远快于XML。
+
+#### 参考
+
+- [Fe-Interview-questions](https://github.com/HerbertKarajan/Fe-Interview-questions/tree/master/21-Front-end-Interview-questions)
+
+</details>

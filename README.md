@@ -48,3 +48,4 @@
 - [yoyoyohamapi | undersercore 源码分析](https://legacy.gitbook.com/book/yoyoyohamapi/undersercore-analysis/details)
 - [ECMAScript 6 入门 | 阮一峰](http://es6.ruanyifeng.com/)
 - [huruji | blog](https://github.com/huruji/blog)
+- [默语 | 常见前端面试题及答案](http://www.cnblogs.com/syfwhu/p/4434132.html)
