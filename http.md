@@ -102,3 +102,61 @@
 - [JS 跨域问题常见的五种解决方式](https://www.cnblogs.com/imwtr/p/4764123.html)
 
 </details>
+
+<details>
+<summary>将静态资源放在其他域名的目的是什么</summary>
+
+> 在请求这些静态资源的时候不会发送cookie，节省了流量，需要注意的是cookie是会发送给子域名的（二级域名），所以这些静态资源是不会放在子域名下的， 而是单独放在一个单独的主域名下。同时还有一个原因就是浏览器对于一个域名会有请求数的限制，这种方法可以方便做CDN
+
+#### 参考
+
+- [将静态资源放在其他域名的目的是什么](https://huruji.github.io/FE-Interview/#/docs/JavaScript?id=_41%E5%B0%86%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%94%BE%E5%9C%A8%E5%85%B6%E4%BB%96%E5%9F%9F%E5%90%8D%E7%9A%84%E7%9B%AE%E7%9A%84%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F)
+
+</details>
+
+<details>
+<summary>页面从输入URL到展现发生了什么</summary>
+
+#### 参考
+
+- [页面从输入URL到展现发生了什么](https://huruji.github.io/FE-Interview/#/docs/NetWork?id=_1%E9%A1%B5%E9%9D%A2%E4%BB%8E%E8%BE%93%E5%85%A5url%E5%88%B0%E5%B1%95%E7%8E%B0%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88)
+
+</details>
+
+<details>
+<summary>cookie和session的异同</summary>
+
+> cookie和session都可以用来存储用户信息，cookie存放于客户端，session存放于服务端，因为cookie存放于客户端 有可能被窃取，因此cookie一般用来存放不敏感的信息，如用户设置的网站主题等，敏感的信息采用session存储，如用户 的登陆信息，session可以存放于文件、数据库、内存中都可以，cookie可以服务端响应的时候设置，也可以客户端通过js设置, cookie会在请求时在http首部发送给客户端，cookie一般在客户端有大小限制，一般为4k。
+
+#### 参考
+
+- [cookie和session的异同](https://huruji.github.io/FE-Interview/#/docs/NetWork?id=_2cookie%E5%92%8Csession%E7%9A%84%E5%BC%82%E5%90%8C)
+
+</details>
+
+<details>
+<summary>常见的网页性能优化方法</summary>
+
+- 减少HTTP请求
+> 使用雪碧图、内联图片，合并脚本和样式表。
+- 使用内容分发网络（CDN）
+- 添加Expires头
+- 压缩组件
+> 压缩样式表和脚本，开启gzip压缩大概减少70%的大小
+- 样式表放在顶部
+- 将脚本放在底部
+- 避免CSS表达式
+- 使用外部JavaScript和CSS
+- 减少DNS查找
+- 精简JavaScript
+- 避免重定向
+- 网站中除了域名首页外缺少斜杠将引起301重定向，个人测试工作室网站这个重定向消耗的时间在30ms左右
+- 删除重复脚本
+- 配置ETag
+- 使Ajax可缓存
+
+#### 参考
+
+- [常见的网页性能优化方法](https://huruji.github.io/FE-Interview/#/docs/Performance)
+
+</details>

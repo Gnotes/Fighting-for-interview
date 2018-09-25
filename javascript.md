@@ -2087,11 +2087,92 @@ function recursion(x){
 </details>
 
 <details>
-<summary>如何实现一个双向数据绑定</summary>
+<summary>PWA(Progressive Web App)</summary>
 
 #### 参考
 
-- [如何实现一个双向数据绑定](http://www.sohu.com/a/119946121_465979)
+- [PWA(Progressive Web App)](https://segmentfault.com/a/1190000012353473)
+
+</details>
+
+<details>
+<summary>AMD, CMD, CommonJS和UMD</summary>
+
+- AMD 是 RequireJS 在推广过程中对模块定义的规范化产出
+- CMD 是 SeaJS 在推广过程中对模块定义的规范化产出
+- UMD是AMD和CommonJS的结合
+
+类似的还有 CommonJS Modules/2.0 规范，是 BravoJS 在推广过程中对模块定义的规范化产出。还有不少⋯⋯这些规范的目的都是为了 JavaScript 的模块化开发，特别是在浏览器端的。目前这些规范的实现都能达成浏览器端模块化开发的目的。
+
+区别：
+
+1. 对于依赖的模块，AMD 是提前执行，CMD 是延迟执行。不过 RequireJS 从 2.0 开始，也改成可以延迟执行（根据写法不同，处理方式不同）。CMD 推崇 as lazy as possible.  
+2. CMD 推崇依赖就近，AMD 推崇依赖前置
+
+```js
+// CMD
+define(function(require, exports, module) {   
+  var a = require('./a')
+  a.doSomething()
+  var b = require('./b') 
+  b.doSomething()
+})
+```
+
+```js
+// AMD
+define(['./a', './b'], function(a, b) { // 依赖必须一开始就写好
+  a.doSomething()
+  b.doSomething()
+})
+
+```
+
+> 虽然 AMD 也支持 CMD 的写法，同时还支持将 require 作为依赖项传递，但 RequireJS 的作者默认是最喜欢上面的写法，也是官方文档里默认的模块定义写法。
+
+3. AMD 的 API 默认是 **一个当多个用**，CMD 的 API 严格区分，推崇职责单一。比如 AMD 里，require 分全局 require 和局部 require，都叫 require。CMD 里，没有全局 require，而是根据模块系统的完备性，提供 seajs.use 来实现模块系统的加载启动。CMD 里，每个 API 都简单纯粹。
+
+4. UMD先判断是否支持Node.js的模块（exports）是否存在，存在则使用Node.js模块模式。在判断是否支持AMD（define是否存在），存在则使用AMD方式加载模块
+
+```js
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['b'], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        // Node. Does not work with strict CommonJS, but
+        // only CommonJS-like environments that support module.exports,
+        // like Node.
+        module.exports = factory(require('b'));
+    } else {
+        // Browser globals (root is window)
+        root.returnExports = factory(root.b);
+    }
+}(this, function (b) {
+    //use b in some fashion.
+
+    // Just return a value to define the module export.
+    // This example returns an object, but the module
+    // can return a function as the exported value.
+    return {};
+}));
+```
+
+#### 参考
+
+- [AMD, CMD, CommonJS和UMD](https://www.jianshu.com/p/bd4585b737d7)
+- [AMD 和 CMD 的区别有哪些？](https://www.zhihu.com/question/20351507)
+
+</details>
+
+<details>
+<summary>HTML5的存储方案有哪些</summary>
+
+> HTML5提供了sessionStorage、localStorage和离线存储作为新的存储方案，其中sessionStorage和localStorage 都是采用键值对的形式存储，两者都是通过setItem、getItem、removeItem来实现增删查改，而sessionStorage是会话存储，也就是说 当浏览器关闭之后sessionStorage也自动清空了，而localStorage不会，它没有时间上的限制。离线存储也就是应用程序缓存，这个通常用来 确保web应用能够在离线情况下使用，通过在html标签中属性manifest来声明需要缓存的文件，这个属性的值是一个包含需要缓存的文件的文件名的文件， 这个manifest文件声明的缓存文件可在初次加载后缓存在客户端，可以通过更新这个manifest文件来达到更新缓存文件的目的
+
+#### 参考
+
+- [HTML5的存储方案有哪些](https://huruji.github.io/FE-Interview/#/docs/HTML?id=_1viewport%E7%9A%84%E5%B8%B8%E8%A7%81%E8%AE%BE%E7%BD%AE%E6%9C%89%E5%93%AA%E4%BA%9B)
 
 </details>
 
