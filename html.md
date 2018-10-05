@@ -121,3 +121,49 @@
 - [什么是web语义化,有什么好处](https://github.com/HerbertKarajan/Fe-Interview-questions/tree/master/23-FE-interview-master)
 
 </details>
+
+<details>
+<summary>div+css的布局较table布局有什么优点</summary>
+
+- 改版的时候更方便 只要改css文件。
+- 页面加载速度更快、结构化清晰、页面显示简洁。
+- 表现与结构相分离。
+- 易于优化（seo）搜索引擎更友好，排名更容易靠前。
+
+#### 参考
+
+- [div+css的布局较table布局有什么优点](http://www.cnblogs.com/coco1s/p/4034937.html)
+
+</details>
+
+<details>
+<summary>微格式</summary>
+
+> 微格式（Microformats）是一种让机器可读的语义化XHTML词汇的集合，是结构化数据的开放标准。是为特殊应用而制定的特殊格式。
+
+- 优点：将智能数据添加到网页上，让网站内容在搜索引擎结果界面可以显示额外的提示
+
+#### 参考
+
+- [微格式](http://www.cnblogs.com/coco1s/p/4034937.html)
+
+</details>
+
+<details>
+<summary>什么是外边距重叠？重叠的结果是什么？</summary>
+
+外边距重叠就是margin-collapse。
+
+> 在CSS当中，相邻的两个盒子（可能是兄弟关系也可能是祖先关系）的外边距可以结合成一个单独的外边距。这种合并外边距的方式被称为折叠，并且因而所结合成的外边距称为折叠外边距。
+
+**折叠结果遵循下列计算规则：**
+
+- 两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值。
+- 两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。
+- 两个外边距一正一负时，折叠结果是两者的相加的和。
+
+#### 参考
+
+- [什么是外边距重叠？重叠的结果是什么？](http://www.cnblogs.com/coco1s/p/4034937.html)
+
+</details>

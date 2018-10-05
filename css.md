@@ -538,3 +538,40 @@ box-sizing:border-box;
 - [前端常见面试题汇总](https://www.geekjc.com/ebook/detail/5ba5bcae7143880b09cb4d54)
 
 </details>
+
+<details>
+<summary>CSS 属性是否区分大小写</summary>
+
+> 不区分。 HTML，CSS都对大小写不敏感，但为了更好的可读性和团队协作一般都小写，而在XHTML 中元素名称和属性是必须小写的
+
+#### 参考
+
+- [Front-end-Web-Development-Interview-Question](https://github.com/paddingme/Front-end-Web-Development-Interview-Question)
+
+</details>
+
+<details>
+<summary>rgba和opacity的透明效果有什么不同</summary>
+
+> rgba和opacity都能实现透明效果，但最大的不同是opacity作用于元素，以及元素内的所有内容的透明度，
+
+> 而rgba只作用于元素的颜色或其背景色。（设置rgba透明的元素的子元素不会继承透明效果！）
+
+#### 参考
+
+- [rgba()和opacity的透明效果有什么不同](http://www.cnblogs.com/coco1s/p/4034937.html)
+
+</details>
+
+<details>
+<summary>描述一个"reset"的CSS文件并如何使用它。知道normalize.css吗？你了解他们的不同之处</summary>
+
+> 重置样式非常多，凡是一个前端开发人员肯定有一个常用的重置CSS文件并知道如何使用它们。他们是盲目的在做还是知道为什么这么做呢？原因是不同的浏览器对一些元素有不同的默认样式，如果你不处理，在不同的浏览器下会存在必要的风险，或者更有戏剧性的性发生。
+
+> 你可能会用 [Normalize](http://necolas.github.io/normalize.css/) 来代替你的重置样式文件。它没有重置所有的样式风格，但仅提供了一套合理的默认样式值。既能让众多浏览器达到一致和合理，但又不扰乱其他的东西（如粗体的标题）
+
+#### 参考
+
+- [描述一个"reset"的CSS文件并如何使用它。知道normalize.css吗？你了解他们的不同之处](http://www.cnblogs.com/coco1s/p/4034937.html)
+
+</details>

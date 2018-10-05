@@ -51,3 +51,6 @@
 - [默语 | 常见前端面试题及答案](http://www.cnblogs.com/syfwhu/p/4434132.html)
 - [markyun | My-blog](https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers)
 - [前端常见面试题汇总](https://www.geekjc.com/ebook/detail/5ba5bcae7143880b09cb4d54)
+- [BAT及各大互联网公司2014前端笔试面试题--JavaScript篇](http://www.cnblogs.com/coco1s/p/4029708.html)
+- [BAT及各大互联网公司2014前端笔试面试题--Html,Css篇](http://www.cnblogs.com/coco1s/p/4034937.html)
+- [张鑫旭 | 博客](https://www.zhangxinxu.com/wordpress/)
