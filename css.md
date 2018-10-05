@@ -463,6 +463,15 @@ box-sizing属性可以为三个值之一：
 - `padding-box`，padding计算入宽度内
 - `border-box`，border和padding计算入宽度之内
 
+> ie盒模型算上border、padding及自身（不算margin），标准的只算上自身窗体的大小 css设置方法如下
+
+```css
+/* 标准模型 */
+box-sizing:content-box;
+ /*IE模型*/
+box-sizing:border-box;
+```
+
 #### 参考
 
 - [box-sizing是什么](https://juejin.im/post/5a954add6fb9a06348538c0d)
@@ -482,5 +491,50 @@ box-sizing属性可以为三个值之一：
 #### 参考
 
 - [CSS知识总结](https://juejin.im/post/5a954add6fb9a06348538c0d)
+
+</details>
+
+<details>
+<summary>Dom元素获得宽高的方式</summary>
+
+- dom.style.width/height
+
+> 这种方式只能取到dom元素内联样式所设置的宽高，也就是说如果该节点的样式是在style标签中或外联的CSS文件中设置的话，通过这种方法是获取不到dom的宽高的。
+
+- dom.currentStyle.width/height
+
+>这种方式获取的是在页面渲染完成后的结果，就是说不管是哪种方式设置的样式，都能获取到。但这种方式只有IE浏览器支持。
+
+- window.getComputedStyle(dom).width/height 　
+　
+> 这种方式的原理和2是一样的，这个可以兼容更多的浏览器，通用性好一些。
+
+- dom.getBoundingClientRect().width/height 　　
+
+> 这种方式是根据元素在视窗中的绝对位置来获取宽高的
+
+- dom.offsetWidth/offsetHeight 　　
+
+> 最常用的，也是兼容最好的。
+
+#### 参考
+
+- [前端常见面试题汇总](https://www.geekjc.com/ebook/detail/5ba5bcae7143880b09cb4d54)
+
+</details>
+
+<details>
+<summary>各种获得宽高的方式</summary>
+
+- 获取屏幕的高度和宽度（屏幕分辨率）： window.screen.height/width
+- 获取屏幕工作区域的高度和宽度（去掉状态栏）： window.screen.availHeight/availWidth
+- 网页全文的高度和宽度： document.body.scrollHeight/Width
+- 滚动条卷上去的高度和向右卷的宽度： document.body.scrollTop/scrollLeft
+- 网页可见区域的高度和宽度（不加边线）： document.body.clientHeight/clientWidth
+- 网页可见区域的高度和宽度（加边线）： document.body.offsetHeight/offsetWidth
+
+#### 参考
+
+- [前端常见面试题汇总](https://www.geekjc.com/ebook/detail/5ba5bcae7143880b09cb4d54)
 
 </details>

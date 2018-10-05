@@ -50,3 +50,4 @@
 - [huruji | blog](https://github.com/huruji/blog)
 - [默语 | 常见前端面试题及答案](http://www.cnblogs.com/syfwhu/p/4434132.html)
 - [markyun | My-blog](https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers)
+- [前端常见面试题汇总](https://www.geekjc.com/ebook/detail/5ba5bcae7143880b09cb4d54)
