@@ -184,3 +184,17 @@ JSON的速度要远远快于XML。
 - [Fe-Interview-questions](https://github.com/HerbertKarajan/Fe-Interview-questions/tree/master/21-Front-end-Interview-questions)
 
 </details>
+
+<details>
+<summary>IndexDB 、WebSql、LocalStorage、SessionStorage、Cookie</summary>
+
+> 虽然在HTML5 WebStorage介绍了html5本地存储的 `Local Storage` 和 `Session Storage` (其API是同步)，这两个是以 `键值对存储` 的解决方案，存储少量数据结构很有用，**但是对于大量结构化数据就无能为力了，灵活大不够强大**。我们经常在数据库中处理大量结构化数据，html5引入 `Web SQL Database` 概念，它使用 SQL 来操纵客户端数据库的 API，规范中使用的方言是SQLlite; `IndexedDB` 是HTML5规范里新出现的浏览器里内置的数据库。对于在浏览器里存储数据，你可以使用cookies或local storage，但它们都是比较简单的技术，而IndexedDB提供了类似 *数据库风格的数据存储和使用方式* 。存储在IndexedDB里的数据是  **永久保存**
+
+> `Local Storage` 和 `Session Storage` API是同步的。  
+> `Web SQL` 和 `IndexedDB` API是异步的
+
+#### 参考
+
+- [HTML5本地存储——Web SQL Database与indexedDB](https://www.cnblogs.com/hoboStage/p/5099637.html)
+
+</details>
