@@ -167,3 +167,26 @@
 - [什么是外边距重叠？重叠的结果是什么？](http://www.cnblogs.com/coco1s/p/4034937.html)
 
 </details>
+
+<details>
+<summary>HTML中常用标签中英文？</summary>
+
+- ul ：是unordered lists的缩写 (无序列表)
+- li ：是list item的缩写 （列表项目）
+- ol ：是ordered lists的缩写（有序列表）
+- dl ：是definition lists的英文缩写 (自定义列表)
+- dt ：是definition term的缩写 (自定义列表组)
+- dd ：是definition description的缩写（自定义列表描述）
+- nl ：是navigation lists的英文缩写 （导航列表）
+- tr ：是table row的缩写 （表格中的一行）
+- th ：是table header cell的缩写 （表格中的表头）
+- td ：是table data cell的缩写 （表格中的一个单元格）
+- cell ：单元格
+- cellpadding ：（单元格补白）
+- cellspacing ：（单元格边距）
+
+#### 参考
+
+- [网页设计中常用标签英文？](https://www.zhihu.com/question/48053930)
+
+</details>
