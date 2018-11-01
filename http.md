@@ -308,3 +308,14 @@ HTTP 503：由于超载或停机维护，服务器目前无法使用，一段时
 - [Questions-and-Answers](https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers)
 
 </details>
+
+<details>
+<summary>HTTP1.0、HTTP1.1 和 HTTP2.0 的区别？</summary>
+
+#### 参考
+
+- [HTTP1.0、HTTP1.1 和 HTTP2.0 的区别](https://www.cnblogs.com/heluan/p/8620312.html)
+- [HTTP、 HTTP1.1、 HTTP/2的区别](https://blog.csdn.net/xincai/article/details/71169377)
+- [HTTP2与HTTP1.1的区别](https://blog.csdn.net/zhouhao88410234/article/details/77188890)
+
+</details>
