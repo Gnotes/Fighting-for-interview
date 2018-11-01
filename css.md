@@ -600,3 +600,16 @@ box-sizing:border-box;
 - [（淘宝无限适配）手机端rem布局详解](https://www.cnblogs.com/well-nice/p/5509589.html)
 
 </details>
+
+</details>
+
+<details>
+<summary>CSS中position属性介绍(新增sticky)？</summary>
+
+#### 参考
+
+- [CSS中position属性介绍(新增sticky)](https://www.cnblogs.com/s1nker/p/4835079.html)
+- [HTML DOM position 属性](http://www.w3school.com.cn/jsref/prop_style_position.asp)
+
+</details>
+
