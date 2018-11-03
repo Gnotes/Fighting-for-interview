@@ -53,3 +53,29 @@ Keys负责帮助React跟踪列表中哪些元素被改变/添加/移除。React�
 React中受控与非受控组件](https://segmentfault.com/a/1190000012404114)
 
 </details>
+
+<details>
+<summary>React.Component与React.PureComponent的区别？</summary>
+
+> `React.PureComponent` 与 `React.Component` 几乎完全相同，但 `React.PureComponent` 通过 prop 和 state 的 **`浅对比`** 来实现 shouldComponentUpate()
+
+> React.PureComponent 的 shouldComponentUpdate() 只会对对象进行浅对比。如果对象包含复杂的数据结构，它可能会因深层的数据不一致而产生错误的否定判断(表现为对象深层的数据已改变视图却没有更新, 原文：false-negatives)。当你期望只拥有简单的props和state时，才去继承 PureComponent ，或者在你知道深层的数据结构已经发生改变时使用 forceUpate() 。或者，考虑使用 不可变对象 来促进嵌套数据的快速比较。  
+
+> 此外,React.PureComponent 的 shouldComponentUpate() 会忽略整个组件的子级。请确保所有的子级组件也是”Pure”的
+
+#### 参考
+
+- [React.PureComponent](https://react.docschina.org/docs/react-api.html#reactpurecomponent)
+
+</details>
+
+<details>
+<summary>为什么在需要在没有使用React的jsx模块中需要引入 import React from 'react' ？</summary>
+
+> 每个JSX元素仅是调用 `React.createElement` 的语法糖，因此在调用 `render` 方式时，底层实现其实依然调用的是 `React.createElement`，因此需要引入
+
+#### 参考
+
+- [Creating React Elements](https://react.docschina.org/docs/react-api.html#creating-react-elements)
+
+</details>
