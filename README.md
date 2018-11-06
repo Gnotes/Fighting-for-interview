@@ -1,5 +1,7 @@
 # Fighting-for-interview
 
+**见高山知矮小，临大海知浅薄**
+
 > 知识点汇集
 
 ## Contents
