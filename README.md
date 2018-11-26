@@ -63,6 +63,7 @@
 - [leonardomso | 33-js-concepts](https://github.com/leonardomso/33-js-concepts)
 - [Web API 接口](https://developer.mozilla.org/zh-CN/docs/Web/API)
 - [SunShinewyf | issue-blog](https://github.com/SunShinewyf/issue-blog)
+- [woai30231 | http](https://github.com/woai30231/http)
 
 ##### Node
 
