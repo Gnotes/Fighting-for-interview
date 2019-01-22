@@ -7,6 +7,8 @@
 
 脱离文档流的方式有两种：**浮动和定位**
 
+对于position: absolute，元素定位将相对于 `最近` 的一个 `relative`、`fixed` 或 `absolute` 的父元素，如果没有则相对于 `body`
+
 #### 参考
 
 - [html/css基础篇——DOM中关于脱离文档流的几种情况分析](https://www.cnblogs.com/chuaWeb/p/html_css_position_float.html)
