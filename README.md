@@ -74,3 +74,7 @@
 #### React
 
 - [sudheerj | reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions)
+
+#### JavaScript Algorithms & Data Structures
+
+- [JavaScript Algorithms and Data Structures](https://github.com/Gnotes/javascript-algorithms)
