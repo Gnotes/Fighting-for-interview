@@ -70,6 +70,8 @@
 - [rccoder | blog](https://github.com/rccoder/blog)
 - [掘金翻译计划](https://github.com/xitu/gold-miner)
 - [wxyyxc1992 | Web-Series](https://github.com/wxyyxc1992/Web-Series)
+- [yygmind | blog](https://github.com/yygmind/blog)
+- [sisterAn | blog](https://github.com/sisterAn/blog)
 
 #### Node
 
