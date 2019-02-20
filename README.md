@@ -69,6 +69,7 @@
 - [creeperyang | blog](https://github.com/creeperyang/blog)
 - [rccoder | blog](https://github.com/rccoder/blog)
 - [掘金翻译计划](https://github.com/xitu/gold-miner)
+- [wxyyxc1992 | Web-Series](https://github.com/wxyyxc1992/Web-Series)
 
 #### Node
 
