@@ -1996,12 +1996,23 @@ function recursion(x){
 </details>
 
 <details>
-<summary>事件循环</summary>
+<summary>事件循环 Event Loop</summary>
 
 #### 参考
 
 - [深入浅出Javascript事件循环机制(上)](https://zhuanlan.zhihu.com/p/26229293)
 - [深入浅出Javascript事件循环机制(下)](https://zhuanlan.zhihu.com/p/26238030)
+
+</details>
+
+</details>
+
+<details>
+<summary>宏任务&微任务</summary>
+
+#### 参考
+
+- [这一次，彻底弄懂 JavaScript 执行机制】https://juejin.im/post/59e85eebf265da430d571f89)
 
 </details>
 
