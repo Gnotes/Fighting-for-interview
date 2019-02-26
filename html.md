@@ -203,3 +203,16 @@
 - [WebGL](https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API)
 
 </details>
+
+<details>
+<summary>HTML 中的7阶层叠水平（元素的层叠关系）</summary>
+
+> `正 z-index` > `inline-block` > `float` > `block` > `负 z-index` > `backgroud`
+
+也就是说： 除了`z-index`外，还有这些层级的关系
+
+#### 参考
+
+- [关于元素层级的一些介绍](http://www.cnblogs.com/zourong/p/5465953.html)
+
+</details>
