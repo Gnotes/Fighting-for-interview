@@ -72,6 +72,7 @@
 - [wxyyxc1992 | Web-Series](https://github.com/wxyyxc1992/Web-Series)
 - [yygmind | blog](https://github.com/yygmind/blog)
 - [sisterAn | blog](https://github.com/sisterAn/blog)
+- [Advanced-Frontend | Daily-Interview-Question](https://github.com/Advanced-Frontend/Daily-Interview-Question)
 
 #### Node
 
