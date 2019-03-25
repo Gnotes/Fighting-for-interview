@@ -82,6 +82,7 @@
 #### React
 
 - [sudheerj | reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions)
+- [从 React 绑定 this，看 JS 语言发展和框架设计](https://zhuanlan.zhihu.com/p/27713910)
 
 #### JavaScript Algorithms & Data Structures
 
