@@ -83,6 +83,7 @@
 
 - [sudheerj | reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions)
 - [从 React 绑定 this，看 JS 语言发展和框架设计](https://zhuanlan.zhihu.com/p/27713910)
+- [React 生命周期函数执行流程图](https://github.com/wojtekmaj/react-lifecycle-methods-diagram)
 
 #### JavaScript Algorithms & Data Structures
 
