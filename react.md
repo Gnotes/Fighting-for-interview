@@ -79,3 +79,11 @@ React中受控与非受控组件](https://segmentfault.com/a/1190000012404114)
 - [Creating React Elements](https://react.docschina.org/docs/react-api.html#creating-react-elements)
 
 </details>
+
+<details>
+<summary>React 源码剖析</summary>
+
+- [React源码解析](https://juejin.im/post/5a84682ef265da4e83266cc4)
+- [React 源码全方位剖析](http://www.sosout.com/2018/08/12/react-source-analysis.html)
+
+</details>
